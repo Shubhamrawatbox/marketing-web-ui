@@ -17,8 +17,30 @@ module.exports = {
   ],
   theme: {
     extend: {
+      animation: {
+        scroll:
+          "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
+      },
       boxShadow: {
         "xl-indigo": "0 10px 20px -3px rgba(99, 102, 241, 0.5)",
+      },
+      backgroundColor: {
+        "custom-dark": "#141414",
+      },
+      keyframes: {
+        shimmer: {
+          from: {
+            backgroundPosition: "0 0",
+          },
+          to: {
+            backgroundPosition: "-200% 0",
+          },
+        },
+        scroll: {
+          to: {
+            transform: "translate(calc(-50% - 0.5rem))",
+          },
+        },
       },
     },
   },
