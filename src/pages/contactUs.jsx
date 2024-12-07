@@ -1,5 +1,6 @@
 import React from "react";
 import { Tooltip } from "../components/toolTip";
+import InputField from "../components/inputField";
 
 const ContactUs = () => {
   return (
@@ -11,28 +12,25 @@ const ContactUs = () => {
             Please reach out to us and we will get back to you at the speed of
             light.
           </p>
-          <div class="w-full  min-w-[200px] my-6">
-            <label class="block mb-2 text-sm text-slate-600">Add Members</label>
-            <input
-              class="w-full bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-md px-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow"
-              placeholder="Type here..."
-            />
-          </div>
-          <div class="w-full  min-w-[200px] my-6">
-            <label class="block mb-2 text-sm text-slate-600">Add Members</label>
-            <input
-              class="w-full bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-md px-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow"
-              placeholder="Type here..."
-            />
-          </div>
-          <div class="w-full  min-w-[200px] my-6">
-            <label class="block mb-2 text-sm text-slate-600">Add Members</label>
-            <input
-              class="w-full bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-md px-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow"
-              placeholder="Type here..."
-            />
-          </div>
-          <button className=" w-full px-8 py-2  bg-black text-white text-sm rounded-md font-semibold hover:bg-black/[0.8] hover:shadow-lg">
+          <InputField
+            label="Name"
+            placeHolder="Enter Your Name..."
+            type="text"
+          />
+          <InputField
+            label="Email"
+            placeHolder="Enter Your Email..."
+            type="email"
+          />
+          <InputField
+            label="Number"
+            placeHolder="Enter Your Number..."
+            type="number"
+          />
+          <button
+            disabled
+            className=" w-full px-8 py-2  bg-black text-white text-sm rounded-md font-semibold hover:bg-black/[0.8] hover:shadow-lg"
+          >
             Submit
           </button>
         </div>

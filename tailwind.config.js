@@ -6,6 +6,16 @@ const {
   default: flattenColorPalette,
 } = require("tailwindcss/lib/util/flattenColorPalette");
 
+const theme = {
+  backgroundColor: {
+    "custom-dark": "#141414",
+    "disabled":"#818589"
+  },
+  text: {
+    dark: "#262626",
+  },
+};
+
 module.exports = {
   content: [
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
@@ -24,8 +34,10 @@ module.exports = {
       boxShadow: {
         "xl-indigo": "0 10px 20px -3px rgba(99, 102, 241, 0.5)",
       },
-      backgroundColor: {
-        "custom-dark": "#141414",
+      colors: {
+        ...theme.backgroundColor,
+        ...theme.text,
+        'blue-400': '#5e83d4',
       },
       keyframes: {
         shimmer: {

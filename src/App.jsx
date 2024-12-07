@@ -7,41 +7,40 @@ import ContactUs from "./pages/contactUs";
 import { lazy, Suspense } from "react";
 
 function App() {
-  console.log("render----");
   const Home = lazy(() => import("./pages/home"));
   const AboutUs = lazy(() => import("./pages/aboutUs"));
   const ContactUs = lazy(() => import("./pages/contactUs"));
   return (
     <>
-       <BrowserRouter>
-      <Routes>
-        <Route element={<Layout />}>
-          <Route
-            index
-            element={
-              <Suspense fallback={<div>hello</div>}>
-                <Home />
-              </Suspense>
-            }
-          />
-          <Route
-            path="/aboutUs"
-            element={
-              <Suspense fallback={<div>hello</div>}>
-                <AboutUs />
-              </Suspense>
-            }
-          />
-          <Route
-            path="/contactUs"
-            element={
-              <Suspense fallback={<div>hello</div>}>
-                <ContactUs />
-              </Suspense>
-            }
-          />
-        </Route>
-      </Routes>
+      <BrowserRouter>
+        <Routes>
+          <Route element={<Layout />}>
+            <Route
+              index
+              element={
+                <Suspense fallback={<div>hello</div>}>
+                  <Home />
+                </Suspense>
+              }
+            />
+            <Route
+              path="/aboutUs"
+              element={
+                <Suspense fallback={<div>hello</div>}>
+                  <AboutUs />
+                </Suspense>
+              }
+            />
+            <Route
+              path="/contactUs"
+              element={
+                <Suspense fallback={<div>hello</div>}>
+                  <ContactUs />
+                </Suspense>
+              }
+            />
+          </Route>
+        </Routes>
       </BrowserRouter>
     </>
   );
