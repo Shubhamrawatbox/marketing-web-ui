@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { NavbarMenu } from "./navbar-menu";
-import logo from '@/assets/logo.png'
+import logo from "@/assets/logo.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,13 +9,9 @@ const Navbar = () => {
     <nav className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white shadow-lg">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
-          {/* Logo */}
           <div className="text-2xl font-extrabold tracking-wide bg-white rounded-lg">
-            <img src={logo} width={80} height={100} className="rounded-full"/>
-            {/* <span className="text-indigo-500">Brand</span>Logo */}
+            <img src={logo} width={80} height={100} className="rounded-full" />
           </div>
-
-          {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-6">
             <NavbarMenu />
           </div>
