@@ -2,7 +2,7 @@ import React from "react";
 
 export const TeamCard = ({ name, position, description, image, linkedin }) => {
   return (
-    <div className="max-w-xs p-6 bg-neutral-900 rounded-lg shadow-md transition-shadow duration-300 hover:shadow-xl hover:shadow-indigo-500/50 cursor-pointer">
+    <div className="max-w-xs p-6 bg-neutral-900 rounded-lg shadow-md transition-shadow duration-300 hover:shadow-xl hover:bg-gradient-to-br from-purple-500 to-pink-500 cursor-pointer">
       <img
         className="rounded-md"
         src={image}

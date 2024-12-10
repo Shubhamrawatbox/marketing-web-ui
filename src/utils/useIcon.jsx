@@ -13,15 +13,15 @@ export function useIcon(icon) {
     switch (icon) {
       case "IconHome":
         return (
-          <IconHome className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+          <IconHome className="h-full w-full text-black dark:text-neutral-300" />
         );
       case "IconMessage":
         return (
-          <IconMessage className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+          <IconMessage className="h-full w-full text-black dark:text-neutral-300" />
         );
       case "IconPhoneCall":
         return (
-          <IconPhoneCall className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+          <IconPhoneCall className="h-full w-full text-black dark:text-neutral-300" />
         );
       case "IconBrandLinkedin":
         return <IconBrandLinkedin />;

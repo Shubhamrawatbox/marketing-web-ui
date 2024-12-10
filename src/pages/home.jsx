@@ -1,13 +1,13 @@
 import React from 'react'
 import { HeroScrollBanner } from "../components/bannerContainer";
-import { HeroImagesSlider } from "../components/heroImageSlider";
+import { HeroParallaxBanner } from "../components/heroParallaxBanner";
 import { FeaturesSection } from "../components/featureSection";
 import { TestimonialCards } from '../components/testimonialCards';
 
 const Home = () => {
   return (
     <div>
-        <HeroImagesSlider/>
+        <HeroParallaxBanner/>
         <HeroScrollBanner/>
         <FeaturesSection/>
         <TestimonialCards/>

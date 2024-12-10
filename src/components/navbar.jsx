@@ -6,14 +6,20 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white shadow-lg">
+    <nav className="bg-black border-solid  border-t-0 border-l-0 border-r-0 border-b-2	 border-gray-800 text-white shadow-lg">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <div className="text-2xl font-extrabold tracking-wide bg-white rounded-lg">
             <img src={logo} width={80} height={100} className="rounded-full" />
           </div>
-          <div className="hidden md:flex items-center space-x-6">
+          <div className="hidden md:flex items-center space-x-12">
             <NavbarMenu />
+            <button className="p-[3px] relative w-full">
+              <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg" />
+              <div className="px-4 py-2  bg-black rounded-[6px]  relative group transition duration-200 text-white hover:bg-transparent">
+                Contact Us
+              </div>
+            </button>
           </div>
 
           {/* Mobile Menu Button */}
