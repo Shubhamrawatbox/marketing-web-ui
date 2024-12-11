@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { NavbarMenu } from "./navbar-menu";
 import logo from "@/assets/logo.png";
+import { Link } from "react-router";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,14 +11,23 @@ const Navbar = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <div className="text-2xl font-extrabold tracking-wide bg-white rounded-lg">
-            <img src={logo} width={80} height={100} className="rounded-full" />
+            <Link to={"/"}>
+              <img
+                src={logo}
+                width={80}
+                height={100}
+                className="rounded-full"
+              />
+            </Link>
           </div>
           <div className="hidden md:flex items-center space-x-12">
             <NavbarMenu />
             <button className="p-[3px] relative w-full">
               <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg" />
               <div className="px-4 py-2  bg-black rounded-[6px]  relative group transition duration-200 text-white hover:bg-transparent">
-                Contact Us
+                <Link className="text-white hover:text-white" to={"/contactUs"}>
+                  Contact Us
+                </Link>
               </div>
             </button>
           </div>

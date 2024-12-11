@@ -6,8 +6,8 @@ import { useIcon } from "../utils/useIcon";
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-r from-gray-900 via-gray-800 to-black text-white py-12">
-      <div className="container mx-auto px-6 text-center">
+<footer className="bg-gradient-to-r from-black via-gray-900 to-black text-white py-12">
+<div className="container mx-auto px-6 text-center">
         {/* Newsletter Section */}
         <div className="mb-8">
           <h3 className="text-2xl font-semibold mb-4">Stay Connected</h3>

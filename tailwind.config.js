@@ -27,6 +27,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        'contact-background': "linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('./assets/bg_image.jpg')"
+      },
       animation: {
         scroll:
           "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",

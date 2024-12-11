@@ -7,7 +7,7 @@ const ContactUs = () => {
   return (
     <>
       <Toaster position="top-center" richColors />
-      <div className="h-screen flex">
+      <div className="h-screen flex bg-contact-background bg-cover bg-center">
         <div className="basis-1/2 p-14">
           <div className="bg-custom-dark p-4">
             <h1 className="text-2xl text-white text font-semibold">
