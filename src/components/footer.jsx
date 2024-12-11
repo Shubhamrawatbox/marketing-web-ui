@@ -1,15 +1,8 @@
-import {
-  IconBrandFacebook,
-  IconBrandInstagram,
-  IconBrandLinkedin,
-  IconFaceId,
-} from "@tabler/icons-react";
 import React from "react";
 import { Link } from "react-router";
 import { LinkPreview } from "./ui/link-preview";
 import { footerSocialIconsLink, links } from "../data/menuItems";
 import { useIcon } from "../utils/useIcon";
-// import { getIcons, useIcon } from "../utils/useIcon";
 
 const Footer = () => {
   return (
@@ -57,9 +50,7 @@ const Footer = () => {
                   to="#"
                   className="text-xl hover:text-blue-500 transition duration-300 my-2"
                 >
-                  {useIcon(itemLink?.icon)} 
-                  {/* {IconComponent} */}
-                  {/* <IconBrandLinkedin /> */}
+                  {useIcon(itemLink?.icon)}
                 </Link>
               </LinkPreview>
             </div>
