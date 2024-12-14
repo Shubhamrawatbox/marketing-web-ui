@@ -1,36 +1,24 @@
 import { projects } from "../data/teamdata";
-// import { HoverEffect } from "./ui/card-spotlight";
-
-// export function CardHoverEffect() {
-//   return (
-//     <>
-//       <div className="max-w-5xl mx-auto px-8">
-//         <div className="text-center text-4xl mt-20 text-white">
-//           Defining who we are, what we do, and why we do it.
-//         </div>
-//         <HoverEffect items={projects} />
-
-//       </div>
-//     </>
-//   );
-// }
-
 import { CardSpotlight } from "./ui/card-spotlight";
 
 export function CardHoverEffect() {
   return (
     <div className="max-w-5xl mx-auto px-8">
-      <div className="text-center text-4xl mt-20 text-white">
-        Defining who we are, what we do, and why we do it.
-      </div>
+      <h1 className="font-extrabold text-white mt-10">
+        Our
+        <span className=" mx-2 bg-clip-text text-transparent bg-gradient-to-br from-purple-500 to-pink-500">
+          Service
+        </span>
+      </h1>
+      <p className="text-white font-bold my-2">Defining who we are, what we do, and why we do it.</p>
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2  lg:grid-cols-3  py-10">
         {projects?.map((project) => (
-          <CardSpotlight className="h-60 w-90 cursor-pointer">
+          <CardSpotlight className="min-h-60 min-w-90 cursor-pointer">
             <p className="text-xl font-bold relative z-20 mt-2 text-white">
               {project?.title}
             </p>
             <p className="text-neutral-500 mt-4 relative z-20 text-sm">
-             {project.description}
+              {project.description}
             </p>
           </CardSpotlight>
         ))}

@@ -3,7 +3,7 @@ import { TeamCard } from "../components/teamCard";
 import { CardHoverEffect } from "../components/cards";
 import { team } from "../data/teamdata";
 
-const AboutUs = () => {
+const Service = () => {
   return (
     <>
       <CardHoverEffect />
@@ -19,4 +19,4 @@ const AboutUs = () => {
   );
 };
 
-export default AboutUs;
+export default Service;

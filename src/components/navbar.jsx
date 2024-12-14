@@ -7,7 +7,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-black border-solid  border-t-0 border-l-0 border-r-0 border-b-2	 border-gray-800 text-white shadow-lg">
+    <nav className="bg-black border-solid  border-t-0 border-l-0 border-r-0 border-b-2 	 border-gray-800 text-white shadow-lg">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <div className="text-2xl font-extrabold tracking-wide bg-white rounded-lg">
@@ -35,12 +35,12 @@ const Navbar = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden focus:outline-none"
+            className="md:hidden focus:outline-none bg-transparent"
           >
             <svg
               className="w-6 h-6"
               fill="none"
-              stroke="currentColor"
+              stroke="white"
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
             >
@@ -63,50 +63,36 @@ const Navbar = () => {
           </button>
         </div>
 
-        {/* Mobile Menu */}
-        {isOpen && (
-          <div className="md:hidden flex flex-col space-y-2 mt-2">
-            <a
-              href="#home"
-              className="hover:text-indigo-400 transition duration-300 ease-in-out"
+        {/* Sliding Menu */}
+        <div
+          className={`fixed top-h-24 left-0 h-full w-full bg-black text-white transform ${
+            isOpen ? "translate-x-0" : "-translate-x-full"
+          } transition-transform duration-300 ease-in-out z-50`}
+        >
+          <div className="flex flex-col space-y-4 p-4">
+            <Link
+              to="/"
+              className="hover:text-indigo-400 transition duration-300 ease-in-out text-center text-5xl text-white mt-2	"
+              onClick={() => setIsOpen(false)}
             >
               Home
-            </a>
-            <a
-              href="#about"
-              className="hover:text-indigo-400 transition duration-300 ease-in-out"
-            >
-              About
-            </a>
-            <a
-              href="#services"
-              className="hover:text-indigo-400 transition duration-300 ease-in-out"
+            </Link>
+            <Link
+              to="/service"
+              className="hover:text-indigo-400 transition duration-300 ease-in-out text-center text-5xl text-white mb-9		"
+              onClick={() => setIsOpen(false)}
             >
               Services
-            </a>
-            <a
-              href="#contact"
-              className="hover:text-indigo-400 transition duration-300 ease-in-out"
+            </Link>
+            <Link
+              to="/contactUs"
+              className="hover:text-indigo-400 transition duration-300 ease-in-out text-center text-5xl text-white mt-2"
+              onClick={() => setIsOpen(false)}
             >
               Contact
-            </a>
-            <div className="relative mt-2">
-              <input
-                type="text"
-                placeholder="Search..."
-                className="bg-gray-800 text-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded-full pl-4 pr-10 py-2 w-full"
-              />
-              <svg
-                className="absolute top-1/2 right-3 transform -translate-y-1/2 w-5 h-5 text-gray-400"
-                fill="currentColor"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-              >
-                <path d="M21.53 20.47l-4.807-4.807A7.97 7.97 0 0018 10a8 8 0 10-8 8 7.97 7.97 0 005.663-2.277l4.807 4.807a.75.75 0 001.06-1.06zM10 17.5a7.5 7.5 0 117.5-7.5 7.509 7.509 0 01-7.5 7.5z" />
-              </svg>
-            </div>
+            </Link>
           </div>
-        )}
+        </div>
       </div>
     </nav>
   );

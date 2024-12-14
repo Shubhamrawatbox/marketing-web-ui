@@ -5,9 +5,9 @@ export const links = [
     href: "/",
   },
   {
-    title: "About",
+    title: "Service",
     icon: "IconMessage",
-    href: "/aboutUs",
+    href: "/service",
   },
   {
     title: "Contact",

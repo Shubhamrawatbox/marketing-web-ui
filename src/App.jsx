@@ -7,7 +7,7 @@ import ScrollToTop from "./utils/scrollToTop";
 
 function App() {
   const Home = lazy(() => import("./pages/home"));
-  const AboutUs = lazy(() => import("./pages/aboutUs"));
+  const Service = lazy(() => import("./pages/service"));
   const ContactUs = lazy(() => import("./pages/contactUs"));
   return (
     <>
@@ -24,10 +24,10 @@ function App() {
               }
             />
             <Route
-              path="/aboutUs"
+              path="/service"
               element={
                 <Suspense fallback={<div>hello</div>}>
-                  <AboutUs />
+                  <Service />
                 </Suspense>
               }
             />
