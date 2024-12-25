@@ -9,7 +9,7 @@ const {
 const theme = {
   backgroundColor: {
     "custom-dark": "#141414",
-    "disabled":"#818589"
+    disabled: "#818589",
   },
   text: {
     dark: "#262626",
@@ -28,11 +28,13 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'contact-background': "linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('./assets/bg_image.jpg')"
+        "contact-background":
+          "linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('./assets/bg_image.jpg')",
       },
       animation: {
         scroll:
           "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
+        newscroll: "scrolling 10s linear infinite",
       },
       boxShadow: {
         "xl-indigo": "0 10px 20px -3px rgba(99, 102, 241, 0.5)",
@@ -40,7 +42,7 @@ module.exports = {
       colors: {
         ...theme.backgroundColor,
         ...theme.text,
-        'blue-400': '#5e83d4',
+        "blue-400": "#5e83d4",
       },
       keyframes: {
         shimmer: {
@@ -55,6 +57,10 @@ module.exports = {
           to: {
             transform: "translate(calc(-50% - 0.5rem))",
           },
+        },
+        scrolling: {
+          "0%": { transform: "translateX(100%)" },
+          "100%": { transform: "translateX(-100%)" },
         },
       },
     },

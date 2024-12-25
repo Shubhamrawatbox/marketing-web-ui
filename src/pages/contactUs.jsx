@@ -31,6 +31,11 @@ const ContactUs = () => {
               placeHolder="Enter Your Number..."
               type="number"
             />
+             <InputField
+              label="Telegram ID"
+              placeHolder="Enter Your ID..."
+              type="text"
+            />
             <button
               onClick={() => toast.error("Error Msg")}
               disabled
@@ -43,7 +48,7 @@ const ContactUs = () => {
 
         {/* Tooltip Section */}
         <div className="basis-full sm:basis-1/2 md:basis-1/2 my-auto">
-          <Tooltip />
+          {/* <Tooltip /> */}
         </div>
       </div>
     </>

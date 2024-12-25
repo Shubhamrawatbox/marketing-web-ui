@@ -10,15 +10,18 @@ const Navbar = () => {
     <nav className="bg-black border-solid  border-t-0 border-l-0 border-r-0 border-b-2 	 border-gray-800 text-white shadow-lg">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
-          <div className="text-2xl font-extrabold tracking-wide bg-white rounded-lg">
-            <Link to={"/"}>
-              <img
-                src={logo}
-                width={80}
-                height={100}
-                className="rounded-full"
-              />
-            </Link>
+          <div className="flex items-center">
+            <div className="text-2xl font-extrabold tracking-wide bg-white rounded-lg">
+              <Link to={"/"}>
+                <img
+                  src={logo}
+                  width={80}
+                  height={100}
+                  className="rounded-full"
+                />
+              </Link>
+            </div>
+            <h1 className="text-lg font-extrabold ml-3">Web3Xpand</h1>
           </div>
           <div className="hidden md:flex items-center space-x-12">
             <NavbarMenu />
