@@ -18,13 +18,13 @@ const OurPartners = () => {
     // <div className="h-screen bg-gray-300 flex items-center justify-center">
     <section className="text-center my-10">
       <div className=" mx-auto  relative overflow-hidden w-3/5 rounded-lg shadow-md">
-        <div className="flex items-center gap-5 animate-scroll whitespace-nowrap">
+        <div className="flex items-center gap-10 animate-scroll whitespace-nowrap">
           {logos.concat(logos).map((src, index) => (
             <img
               key={index}
               src={src}
               alt="partner logo"
-              className="w-24 inline-block mix-blend-multiply"
+              className="w-40 inline-block mix-blend-multiply"
             />
           ))}
         </div>
