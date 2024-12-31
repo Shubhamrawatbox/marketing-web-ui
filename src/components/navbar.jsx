@@ -75,21 +75,21 @@ const Navbar = () => {
           <div className="flex flex-col space-y-4 p-4">
             <Link
               to="/"
-              className="hover:text-indigo-400 transition duration-300 ease-in-out text-center text-5xl text-white mt-2	"
+              className="hover:text-indigo-400 transition duration-300 ease-in-out text-center text-4xl text-white mt-2	"
               onClick={() => setIsOpen(false)}
             >
               Home
             </Link>
             <Link
               to="/service"
-              className="hover:text-indigo-400 transition duration-300 ease-in-out text-center text-5xl text-white mb-9		"
+              className="hover:text-indigo-400 transition duration-300 ease-in-out text-center text-4xl text-white mb-9		"
               onClick={() => setIsOpen(false)}
             >
               Services
             </Link>
             <Link
               to="/contactUs"
-              className="hover:text-indigo-400 transition duration-300 ease-in-out text-center text-5xl text-white mt-2"
+              className="hover:text-indigo-400 transition duration-300 ease-in-out text-center text-4xl text-white mt-2"
               onClick={() => setIsOpen(false)}
             >
               Contact

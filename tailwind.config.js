@@ -14,6 +14,7 @@ const theme = {
   text: {
     dark: "#262626",
   },
+ 
 };
 
 module.exports = {
@@ -42,6 +43,7 @@ module.exports = {
       colors: {
         ...theme.backgroundColor,
         ...theme.text,
+        ...theme.screens,
         "blue-400": "#5e83d4",
       },
       keyframes: {
@@ -62,6 +64,12 @@ module.exports = {
           "0%": { transform: "translateX(100%)" },
           "100%": { transform: "translateX(-100%)" },
         },
+      },
+      screens: {
+        'sm': '360px',
+        'md': '768px',
+        'lg': '1024px',
+        'xl': '1280px',
       },
     },
   },
